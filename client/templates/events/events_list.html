@@ -1,0 +1,21 @@
+<template name="eventsList">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>イベント名</th>
+        <th>説明</th>
+        <th>企業・団体</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each events}}
+        <tr>
+          <td><a href="{{pathFor 'eventPage'}}">{{name}}</a></td>
+          <td>{{description}}</td>
+          <td>{{organization}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <a href="{{pathFor 'eventSubmit'}}">イベントを作成</a>
+</template>
